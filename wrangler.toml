@@ -6,6 +6,16 @@ route = ""
 workers_dev = true
 compatibility_date = "2022-04-03"
 
+[env.staging]
+kv_namespaces = [
+  { binding = "MY_KV", preview_id = "839772b3146b4274a6267b53f6513abf", id = "390112669a1643f4b63dc18056d6210a" }
+]
+
+[env.production]
+kv_namespaces = [
+  { binding = "MY_KV", preview_id = "839772b3146b4274a6267b53f6513abf", id = "390112669a1643f4b63dc18056d6210a" }
+]
+
 [build]
 command = "npm install && npm run build"
 [build.upload]
